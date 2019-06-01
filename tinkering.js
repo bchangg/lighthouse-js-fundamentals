@@ -1,27 +1,40 @@
 /*
- * Programming Quiz: 99 Bottles of Juice (4-2)
+ * Programming Quiz: Countdown, Liftoff! (4-3)
  *
- * Use the following `while` loop to write out the song "99 bottles of juice".
- * Log the your lyrics to the console.
+ * Using a while loop, print out the countdown output above.
  *
- * Note
- *   - Each line of the lyrics needs to be logged to the same line.
- *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
+ * Conditions:
+ * Orbiter transfers from ground to internal power (T-50 seconds)
+ * Ground launch sequencer is go for auto sequence start (T-31 seconds)
+ * Activate launch pad sound suppression system (T-16 seconds)
+ * Activate main engine hydrogen burnoff system (T-10 seconds)
+ * Main engine start (T-6 seconds)
+ * Solid rocket booster ignition and liftoff! (T-0 seconds)
  */
 
-var num = 99;
-
-while (num > 0) {
-  if (num === 2) {
-    console.log(num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottle of juice on the wall!");
-  } else if (num > 1) {
-    console.log(num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!");
-  } else {
-    console.log(num + " bottle of juice on the wall! " + num + " bottle of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!");
+let seconds = 60;
+while (seconds >= 0) {
+  switch (seconds) {
+    case 50:
+      console.log("Orbiter transfers from ground to internal power");
+      break;
+    case 31:
+      console.log("Ground launch sequencer is go for auto sequence start");
+      break;
+    case 16:
+      console.log("Activate launch pad sound suppression system");
+      break;
+    case 10:
+      console.log("Activate main engine hydrogen burnoff system");
+      break;
+    case 6:
+      console.log("Main engine start");
+      break;
+    case 0:
+      console.log("Solid rocket booster ignition and liftoff!");
+      break;
+    default:
+      console.log("T-" + seconds + " seconds");
   }
-    // check value of num
-    // print lyrics using num
-    // don't forget to check pluralization on the last line!
-    // decrement num
-    num--;
+  seconds--;
 }
