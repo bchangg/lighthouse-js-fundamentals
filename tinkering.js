@@ -1,10 +1,18 @@
 /*
- * Programming Quiz: Factorials (4-7)
+ * Programming Quiz: Find my Seat (4-8)
+ *
+ * Write a nested for loop to print out all of the different seat combinations in the theater.
+ * The first row-seat combination should be 0-0
+ * The last row-seat combination will be 25-99
+ *
+ * Things to note:
+ *  - the row and seat numbers start at 0, not 1
+ *  - the highest seat number is 99, not 100
  */
 
-// your code goes here
-let solution = 1;
-for (let x = 12; x > 0; x--) {
-  solution *= x;
+// Write your code here
+for (let row = 0; row < 26; row++) {
+  for (let col = 0; col < 100; col++) {
+    console.log(row + "-" + col);
+  }
 }
-console.log(solution);
