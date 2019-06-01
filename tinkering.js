@@ -1,13 +1,10 @@
 /*
- * Programming Quiz: Changing the Loop (4-4)
+ * Programming Quiz: Factorials (4-7)
  */
 
-// rewrite the while loop as a for loop
-for(let x = 9; x >= 1; x--) {
-  console.log("hello " + x);
+// your code goes here
+let solution = 1;
+for (let x = 12; x > 0; x--) {
+  solution *= x;
 }
-var x = 9;
-// while (x >= 1) {
-//     console.log("hello " + x);
-//     x = x - 1;
-// }
+console.log(solution);
