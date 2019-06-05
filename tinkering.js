@@ -1,10 +1,25 @@
 /*
- * Programming Quiz: Laugh it Off 1 (5-1)
+ * Programming Quiz: Build A Triangle (5-3)
  */
 
-// your code goes here
-
-function laugh() {
-  return "hahahahahahahahahaha!";
+// creates a line of * for a given length
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
 }
-console.log(laugh());
+
+// your code goes here.  Make sure you call makeLine() in your own code.
+function buildTriangle(lines) {
+  let result = ""
+  for(let i = 1; i <= lines; i++) {
+    result += makeLine(i);
+  }
+  return result;
+}
+
+
+// test your code by uncommenting the following line
+console.log(buildTriangle(10));
