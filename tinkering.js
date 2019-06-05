@@ -1,14 +1,12 @@
 /*
- * Programming Quiz: Laugh (5-4)
+ * Programming Quiz: Cry (5-5)
+ * Write a named function expression that stores the function in a variable called cry and
+ * returns "boohoo!". Don't forget to call the function using the variable name, not the function
+ * name: cry();
  */
 
-var laugh = function(num) {
-  let result = "";
-  for(let i = 0; i < num; i++) {
-    result += "ha";
-  }
-  result += "!";
-  return result;
+let cry = function crying() {
+  return "boohoo!";
 }
 
-console.log(laugh(10));
+cry();
