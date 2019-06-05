@@ -1,12 +1,21 @@
 /*
- * Programming Quiz: Cry (5-5)
- * Write a named function expression that stores the function in a variable called cry and
- * returns "boohoo!". Don't forget to call the function using the variable name, not the function
- * name: cry();
+ * Programming Quiz: Inline Functions (5-6)
  */
 
-let cry = function crying() {
-  return "boohoo!";
+// don't change this code
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
 }
 
-cry();
+// your code goes here
+// call the emotions function here and pass in an
+// inline function expression
+
+emotions("happy", function laugh(num) {
+  let result = "";
+  for(let i = 0; i < num; i++) {
+    result += "ha";
+  }
+  result += "!";
+  return result;
+}); // you can use your laugh function from the previous quizzes
