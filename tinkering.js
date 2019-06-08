@@ -1,8 +1,14 @@
 /*
- * Programming Quiz: UdaciFamily (6-1)
+ * Programming Quiz: Building the Crew (6-2)
  */
 
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
 
- let udaciFamily = ["Julia", "James", "Brian"];
+let crew = [captain, second, pilot, companion, mercenary, mechanic];
 
- console.log(udaciFamily);
+console.log(crew);
