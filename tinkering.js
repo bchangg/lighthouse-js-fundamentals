@@ -1,11 +1,20 @@
 /*
- * Programming Quiz: Quidditch Cup (6-5)
+ * Programming Quiz: Joining the Crew (6-6)
  */
 
-var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
 
-function hasEnoughPlayers(team) {
-  return team.length >= 7;
-}
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
 
-console.log(hasEnoughPlayers(team));
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+crew.push(doctor, sister, shepherd);
+
+console.log(crew);
