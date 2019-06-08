@@ -1,14 +1,11 @@
 /*
- * Programming Quiz: Building the Crew (6-2)
+ * Programming Quiz: The Price is Right (6-3)
  */
 
-var captain = "Mal";
-var second = "Zoe";
-var pilot = "Wash";
-var companion = "Inara";
-var mercenary = "Jayne";
-var mechanic = "Kaylee";
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
 
-let crew = [captain, second, pilot, companion, mercenary, mechanic];
+prices[0] = 0.5;
+prices[2] = 0;
+prices[6] = 25;
 
-console.log(crew);
+console.log(prices);
