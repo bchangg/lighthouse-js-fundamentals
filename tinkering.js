@@ -1,15 +1,14 @@
-function lastIndexOf(inputArray, value) {
-  let result = -1;
-  inputArray.forEach(function(currentValue, index, workingArray) {
-    if (currentValue === value) {
-      result = index;
-    }
-  });
+function concat(array1, array2) {
+  let newLength = array1.length + array2.length;
+  let result = array1.slice(0);
+  array2.forEach(function(currentValue) {
+    result.push(currentValue);
+  })
+  result.sort();
   return result;
 }
 
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
-console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
-console.log(lastIndexOf([], 3), "=?", -1);
+console.log(concat([ 1, 2, 3 ], [ 4, 5, 6 ]), "=?", [ 1, 2, 3, 4, 5, 6 ]);
+console.log(concat([ 0, 3, 1 ], [ 9, 7, 2 ]), "=?", [ 0, 3, 1, 9, 7, 2 ]);
+console.log(concat([], [ 9, 7, 2 ]), "=?", [ 9, 7, 2 ]);
+console.log(concat([ 5, 10 ], []), "=?", [ 5, 10 ]);
