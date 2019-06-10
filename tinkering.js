@@ -1,24 +1,21 @@
 /*
- * Programming Quiz: Bank Accounts 1 (7-3)
+ * Programming Quiz: Facebook Friends (7-5)
  */
 
-var savingsAccount = {
-  balance: 1000,
-  interestRatePercent: 1,
-  deposit: function addMoney(amount) {
-    if (amount > 0) {
-      savingsAccount.balance += amount;
-    }
+let facebookProfile = {
+  name: "Brian",
+  friends: 10,
+  messages: ["hello", "world", "hola"],
+  postMessage: function(message) {
+    this.messages.push(message);
   },
-  withdraw: function removeMoney(amount) {
-    var verifyBalance = savingsAccount.balance - amount;
-    if (amount > 0 && verifyBalance >= 0) {
-      savingsAccount.balance -= amount;
-    }
+  deleteMessage: function(index) {
+    this.messages.splice(index, 1);
   },
-  printAccountSummary: function summary() {
-    return "Welcome!\nYour balance is currently $" + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent + "%.";
+  addFriend: function() {
+    this.friends++;
+  },
+  removeFriend: function() {
+    this.friends--;
   }
-};
-
-console.log(savingsAccount.printAccountSummary());
+}
