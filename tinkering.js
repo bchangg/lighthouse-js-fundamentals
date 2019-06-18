@@ -1,16 +1,13 @@
-const conditionalSum = function(values, condition) {
+const numberOfVowels = function(data) {
   let sum = 0;
-  for (let i = 0; i < values.length; i++) {
-    if (values[i] % 2 === 1 && condition === "odd") {
-      sum += values[i];
-    } else if (values[i] % 2 === 0 && condition === "even") {
-      sum += values[i];
+  for(let i = 0; i < data.length; i++) {
+    if(data[i] === 'a' || data[i] === 'e' || data[i] === 'i' || data[i] === 'o' || data[i] === 'u' ) {
+      sum++;
     }
   }
   return sum;
 };
 
-console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
-console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));
-console.log(conditionalSum([13, 88, 12, 44, 99], "even"));
-console.log(conditionalSum([], "odd"));
+console.log(numberOfVowels("orange"));
+console.log(numberOfVowels("lighthouse labs"));
+console.log(numberOfVowels("aeiou"));
