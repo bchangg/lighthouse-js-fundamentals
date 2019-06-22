@@ -1,15 +1,26 @@
-const urlEncode = function(text) {
+let repeatNumbers = function(data) {
   let result = "";
-  for(let i = 0; i < text.length; i++) {
-    if(text[i] != " ") {
-      result += text[i];
-    } else if (i != 0 && i != text.length-1){
-      result += "%20";
+  for (let row = 0; row < data.length; row++) {
+    let num = data[row][0];
+    for (let count = 0; count < data[row][1]; count++) {
+      result += num;
+    }
+    if(data[row+1] !== undefined) {
+      result += ", ";
     }
   }
   return result;
 };
 
-console.log(urlEncode("Lighthouse Labs"));
-console.log(urlEncode(" Lighthouse Labs "));
-console.log(urlEncode("blue is greener than purple for sure"));
+console.log(repeatNumbers([
+  [1, 10]
+]));
+console.log(repeatNumbers([
+  [1, 2],
+  [2, 3]
+]));
+console.log(repeatNumbers([
+  [10, 4],
+  [34, 6],
+  [92, 2]
+]));
