@@ -1,26 +1,17 @@
-let repeatNumbers = function(data) {
+let camelCase = function(input) {
   let result = "";
-  for (let row = 0; row < data.length; row++) {
-    let num = data[row][0];
-    for (let count = 0; count < data[row][1]; count++) {
-      result += num;
-    }
-    if(data[row+1] !== undefined) {
-      result += ", ";
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === " ") {
+
+    } else if (input[i - 1] === " ") {
+      result += input.charAt(i).toUpperCase();
+    } else {
+      result += input[i];
     }
   }
   return result;
 };
 
-console.log(repeatNumbers([
-  [1, 10]
-]));
-console.log(repeatNumbers([
-  [1, 2],
-  [2, 3]
-]));
-console.log(repeatNumbers([
-  [10, 4],
-  [34, 6],
-  [92, 2]
-]));
+console.log(camelCase("this is a string"));
+console.log(camelCase("loopy lighthouse"));
+console.log(camelCase("supercalifragalisticexpialidocious"));
