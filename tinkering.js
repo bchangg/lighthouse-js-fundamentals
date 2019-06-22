@@ -1,43 +1,15 @@
-const instructorWithLongestName = function(instructors) {
-  let index = 0;
-  let longestName = "";
-
-  for (let i = 0; i < instructors.length; i++) {
-    if (instructors[i].name.length > longestName.length) {
-      longestName = instructors[i].name;
-      index = i;
+const urlEncode = function(text) {
+  let result = "";
+  for(let i = 0; i < text.length; i++) {
+    if(text[i] != " ") {
+      result += text[i];
+    } else if (i != 0 && i != text.length-1){
+      result += "%20";
     }
   }
-  return instructors[index];
+  return result;
 };
 
-console.log(instructorWithLongestName([{
-    name: "Samuel",
-    course: "iOS"
-  },
-  {
-    name: "Jeremiah",
-    course: "Web"
-  },
-  {
-    name: "Ophilia",
-    course: "Web"
-  },
-  {
-    name: "Donald",
-    course: "Web"
-  }
-]));
-console.log(instructorWithLongestName([{
-    name: "Matthew",
-    course: "Web"
-  },
-  {
-    name: "David",
-    course: "iOS"
-  },
-  {
-    name: "Domascus",
-    course: "Web"
-  }
-]));
+console.log(urlEncode("Lighthouse Labs"));
+console.log(urlEncode(" Lighthouse Labs "));
+console.log(urlEncode("blue is greener than purple for sure"));
