@@ -1,17 +1,17 @@
-let camelCase = function(input) {
+const multiplicationTable = function(maxValue) {
   let result = "";
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === " ") {
-
-    } else if (input[i - 1] === " ") {
-      result += input.charAt(i).toUpperCase();
-    } else {
-      result += input[i];
+  for (let multiplier = 1; multiplier <= maxValue; multiplier++) {
+    for (let currentNum = 1; currentNum <= maxValue; currentNum++) {
+      result += multiplier * currentNum;
+      if (maxValue > 1) {
+        result += " ";
+      }
     }
+    result += "\n";
   }
   return result;
 };
 
-console.log(camelCase("this is a string"));
-console.log(camelCase("loopy lighthouse"));
-console.log(camelCase("supercalifragalisticexpialidocious"));
+console.log(multiplicationTable(1));
+console.log(multiplicationTable(5));
+console.log(multiplicationTable(10));
